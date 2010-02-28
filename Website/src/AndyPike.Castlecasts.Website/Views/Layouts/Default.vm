@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <link rel="stylesheet" type="text/css" href="$siteroot/Content/css/reset-min.css" />
+        <link rel="stylesheet" type="text/css" href="$siteroot/Content/css/reset-fonts.css" />
+        <link rel="stylesheet" type="text/css" href="$siteroot/Content/css/base-min.css" />
+        
+        <link rel="stylesheet" type="text/css" href="$siteroot/Content/less/screen.less.css?v=$version" />
+				
+        <script type="text/javascript" src="$siteroot/Content/js/lib/jquery-1.3.2.min.js"></script>
+        <script type="text/javascript" src="$siteroot/Content/js/lib/jquery-validate-1.5.5.min.js"></script>
+        <script type="text/javascript" src="$siteroot/Content/js/application.js?v=$version"></script>
+                
+		$!head
+		
+		#if(!$title)
+		    #set($title = "Untitled")
+		#end
+		
+		<title>$x.h($title.Trim())</title>
+		
+		<script language="javascript">	    
+		    $(document).ready(function() {
+		        $!script
+		    });
+		</script>
+    </head>
+    <body>
+        <div id="page">
+            <div id="header">
+                Castlecasts
+            </div>
+
+    	    <div id="content">
+    	        <h1>$x.h($title.Trim())</h1>
+    	            
+    	        #if($error)
+        	        <p class="error">$x.h($error)</p>
+        	    #end
+    	    
+    	        #if($notice)
+        	        <p class="notice">$x.h($notice)</p>
+        	    #end
+        	    
+        	    #if($success)
+        	        <p class="success">$x.h($success)</p>
+        	    #end
+    	        	                    	        	                	
+                $childContent
+    	    </div>
+        	
+        	<div id="side-panel">
+        	    <h2>Submit Cast</h2>
+        	    <h2>Search</h2>
+    	        <h2>Categories</h2>
+    	    </div>
+        	
+    	    <div id="footer"></div>   
+    	</div> 
+    </body>
+</html>
