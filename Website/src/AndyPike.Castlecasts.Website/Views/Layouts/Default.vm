@@ -30,7 +30,7 @@
     <body>
         <div id="page">
             <div id="header">
-                Castlecasts
+                <a href="/"><img src="/Content/images/logo.gif" alt="Castlecast" /></a>
             </div>
 
     	    <div id="content">
@@ -52,9 +52,9 @@
     	    </div>
         	
         	<div id="side-panel">
-        	    <h2>Submit Cast</h2>
-        	    <h2>Search</h2>
-    	        <h2>Categories</h2>
+        	    <h3>About</h3>
+        	    <p>Castlecasts is a free resource of screencasts for all the components of the <a href="http://www.castleproject.org">CastleProject</a>.</p>
+        	    <p>If you have a suggestion for a screencast, <a href="http://twitter.com/andypike">just let me know</a></p>
     	    </div>
         	
     	    <div id="footer"></div>   

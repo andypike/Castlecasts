@@ -20,6 +20,9 @@ namespace AndyPike.Castlecasts.Website.Models
         public string Email { get; set; }
 
         [Property]
+        public string TwitterName { get; set; }
+
+        [Property]
         public string PasswordSalt { get; set; }
 
         [Property]
@@ -27,5 +30,10 @@ namespace AndyPike.Castlecasts.Website.Models
 
         [HasMany]
         public IList<Episode> Episodes { get; set; }
+
+        public string FullName
+        {
+            get { return FirstName + " " + LastName; }
+        }
     }
 }

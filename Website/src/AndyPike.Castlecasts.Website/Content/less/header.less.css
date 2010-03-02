@@ -1,3 +1,8 @@
 ﻿#header {
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 10px;
     
+    -moz-border-radius-bottomleft: 20px;
+    -moz-border-radius-bottomright: 20px;
 }

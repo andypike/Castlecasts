@@ -2,3 +2,19 @@
     Latest Episodes
 #end
     
+#foreach($episode in $episodes)
+    <h2><em>#${episode.Id}</em> $Url.Link($episode.Title, "%{controller='Episodes', action='Show', params={episode=$episode.Id}}")</h2>
+    <p>$episode.CreatedAt.ToShortDateString() by <a href="http://twitter.com/$episode.CreatedBy.TwitterName">$episode.CreatedBy.FullName</a> $gravatar.image($episode.CreatedBy.Email, "%{size='32'}")</p>
+    <p>$episode.Description</p>
+    <p>
+        <div class="tags"> 
+            <strong>Tags:</strong>
+            #foreach($tag in $episode.Tags)
+                <span class="tag">$tag.Name</span>
+            #end
+        </div>
+        <div class="level">
+            <strong>Level:</strong> $episode.Level
+        </div>
+    </p>
+#end

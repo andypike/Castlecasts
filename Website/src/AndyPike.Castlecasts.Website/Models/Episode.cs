@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Castle.ActiveRecord;
 using Castle.ActiveRecord.Linq;
+using Castle.Components.Pagination;
+using Castle.MonoRail.Framework.Helpers;
 
 namespace AndyPike.Castlecasts.Website.Models
 {
@@ -18,24 +20,49 @@ namespace AndyPike.Castlecasts.Website.Models
         [Property(SqlType = "nvarchar(max)")]
         public string Description { get; set; }
 
-        [Property]
-        public int VimeoId { get; set; }
+        [Property(SqlType = "nvarchar(max)")]
+        public string MovieHTML { get; set; }
 
         [Property]
         public DateTime CreatedAt { get; set; }
 
+        [Property]
+        public DifficultyLevel Level { get; set; }
+
         [BelongsTo]
         public User CreatedBy { get; set; }
 
-        [HasMany]
+        [HasAndBelongsToMany(Table = "EpisodeTag", ColumnKey = "Episode_Id", ColumnRef = "Tag_Id", Cascade = ManyRelationCascadeEnum.SaveUpdate)]
         public IList<Tag> Tags { get; set; }
 
-        [HasMany]
+        [HasMany(Cascade = ManyRelationCascadeEnum.SaveUpdate)]
         public IList<Comment> Comments { get; set; }
 
-        public static IList<Episode> GetLatestEpisodesPaged()
+        [HasMany(Cascade = ManyRelationCascadeEnum.SaveUpdate)]
+        public IList<Link> Links { get; set; }
+
+        public static IPaginatedPage<Episode> GetLatestEpisodesPaged(int page, int pageSize)
         {
-            return Queryable.OrderBy(e => e.CreatedAt).ToList();
+            return PaginatedFind(Queryable.OrderBy(e => e.CreatedAt), page, pageSize);
+        }
+
+
+
+        //TODO: Fork and add this to the trunk
+        public static IPaginatedPage<T> PaginatedFind<T>(IQueryable<T> query, int page, int pageSize)
+        {
+            page = (page == 0) ? 1 : page;
+
+            int firstResult = ((page - 1) * pageSize);
+
+            ICollection<T> matches = query
+                .Skip(firstResult)
+                .Take(pageSize)
+                .ToList();
+
+            int count = query.Count();
+
+            return PaginationHelper.CreateCustomPage(matches, pageSize, page, count);
         }
     }
 }
