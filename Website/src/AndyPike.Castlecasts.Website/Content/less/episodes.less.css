@@ -1,0 +1,43 @@
+﻿.episode {
+    .tags {
+        clear: both;
+    }
+    
+    .tag {
+        padding: 4px 4px 4px 25px;
+        border: solid 1px #ccc;
+        background-color: #efefef;
+        background-image: url(../images/tag.png);
+        background-repeat: no-repeat;
+        background-position: 4px 4px;
+        display: block;
+        float: left;
+        margin: 0 7px 0 0;
+    }   
+    
+    .user {
+        float: right;
+        margin-left: 10px;
+        text-align: center;
+        color: #666;
+        font-size: 10px;
+        
+        div {
+            margin-bottom: 3px;
+        }
+    } 
+    
+    .comment {
+        border: solid 1px #ccc;
+        background: #efefef;
+        padding: 7px;
+        float: left;
+        width: 640px;
+        margin-bottom: 10px;
+        
+        .user {
+            float: left;
+            margin: 0 10px 0 0;
+        }
+    }
+}

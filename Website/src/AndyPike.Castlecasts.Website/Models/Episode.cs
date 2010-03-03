@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Castle.ActiveRecord;
 using Castle.ActiveRecord.Linq;
 using Castle.Components.Pagination;
@@ -26,20 +27,28 @@ namespace AndyPike.Castlecasts.Website.Models
         [Property]
         public DateTime CreatedAt { get; set; }
 
-        [Property]
-        public DifficultyLevel Level { get; set; }
-
         [BelongsTo]
         public User CreatedBy { get; set; }
 
         [HasAndBelongsToMany(Table = "EpisodeTag", ColumnKey = "Episode_Id", ColumnRef = "Tag_Id", Cascade = ManyRelationCascadeEnum.SaveUpdate)]
         public IList<Tag> Tags { get; set; }
 
-        [HasMany(Cascade = ManyRelationCascadeEnum.SaveUpdate)]
+        [HasMany(Cascade = ManyRelationCascadeEnum.SaveUpdate, OrderBy = "CreatedAt ASC")]
         public IList<Comment> Comments { get; set; }
 
         [HasMany(Cascade = ManyRelationCascadeEnum.SaveUpdate)]
         public IList<Link> Links { get; set; }
+
+        public string SeoTitle
+        {
+            get
+            {
+                string seoTitle = Regex.Replace(Title.Trim(), @"\W", "-");      //Replace . with - hyphen
+                seoTitle = Regex.Replace(seoTitle, @"\055+", "-").Trim('-');    //Replace multiple "-" hyphen with single "-" hyphen.
+
+                return seoTitle.ToLower();
+            }
+        }
 
         public static IPaginatedPage<Episode> GetLatestEpisodesPaged(int page, int pageSize)
         {

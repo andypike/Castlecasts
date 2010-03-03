@@ -19,7 +19,7 @@
 		    #set($title = "Untitled")
 		#end
 		
-		<title>$x.h($title.Trim())</title>
+		<title>$x.h($title.Trim()) :: Castlecasts</title>
 		
 		<script language="javascript">	    
 		    $(document).ready(function() {
@@ -30,7 +30,7 @@
     <body>
         <div id="page">
             <div id="header">
-                <a href="/"><img src="/Content/images/logo.gif" alt="Castlecast" /></a>
+                <a href="/"><img src="/Content/images/logo.gif" alt="Castlecasts" /></a>
             </div>
 
     	    <div id="content">

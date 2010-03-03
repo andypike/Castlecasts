@@ -20,9 +20,6 @@ namespace AndyPike.Castlecasts.Website.Models
         public string Email { get; set; }
 
         [Property]
-        public string TwitterName { get; set; }
-
-        [Property]
         public string PasswordSalt { get; set; }
 
         [Property]

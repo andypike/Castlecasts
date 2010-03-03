@@ -2,14 +2,47 @@
     $episode.Title
 #end
 
-<p>$episode.Description</p>
-<p>
-    $episode.MovieHTML
-</p>
+<div class="episode">
+    <p>$episode.Description</p>
+    <p>$episode.MovieHTML</p>
 
-<h2>Links</h2>
-<ul>
-    #foreach($link in $episode.Links)
-        <li><a href="$link.Text" target="_blank">$link.Text</a></li>
+    <h2>Links</h2>
+    <ul>
+        #foreach($link in $episode.Links)
+            <li><a href="$link.Url" target="_blank">$link.Text</a></li>
+        #end
+    </ul>
+
+    <h2>$episode.Comments.Count Comments</h2>
+    #foreach($comment in $episode.Comments)
+        <div class="comment">
+            <div class="user">
+                <div>$gravatar.image($comment.Email, "%{size='32'}")</div>
+                <div>By $comment.Name</div>
+                <div>On $comment.CreatedAt.ToShortDateString()</div>
+            </div> 
+            $comment.Text
+        </div>
     #end
-</ul>
+    
+    <h2>Add a comment</h2>
+    <form action="$url.for("%{controller='Episodes', action='CreateComment'}")" method="post">
+        $form.hiddenField("episode.id")
+        
+        <p>
+            $form.labelFor("comment.Name", "Name:")
+            $form.textField("comment.Name")
+        </p>
+        <p>
+            $form.labelFor("comment.Email", "Email:")
+            $form.textField("comment.Name")
+        </p>
+        <p>
+            $form.labelFor("comment.Text", "Your Comment:")
+            $form.textarea("comment.Text")
+        </p>
+        <p>
+            $form.submit("Add Comment")
+        </p>
+    </form>
+</div>

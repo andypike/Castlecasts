@@ -13,3 +13,14 @@ body {
 h1, h2, h3 {
     margin-top: 0;
 }
+
+h2 a, h2 a:visited {
+    color: #de8302;
+}
+
+h2 em {
+    background: #de8302;
+    padding: 6px;
+    color: #fff;
+}
+

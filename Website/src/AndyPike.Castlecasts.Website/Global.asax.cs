@@ -34,7 +34,6 @@ namespace AndyPike.Castlecasts.Website
                                {
                                    FirstName = "Andy",
                                    LastName = "Pike",
-                                   TwitterName = "andypike",
                                    Email = "andy@andypike.com"
                                };
                 andy.Save();
@@ -45,11 +44,11 @@ namespace AndyPike.Castlecasts.Website
                                   CreatedBy = andy,
                                   Title = "Getting started with MonoRail",
                                   Description = "Shows how to create your first Castle MonoRail application. Takes you through from downloading the required assemblies, creating a project, configuration and getting your first page showing in the browser.",
-                                  MovieHTML = "<object width='640' height='480'><param name='allowfullscreen' value='true' /><param name='allowscriptaccess' value='always' /><param name='movie' value='http://vimeo.com/moogaloop.swf?clip_id=9802683&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=00ADEF&amp;fullscreen=1' /><embed src='http://vimeo.com/moogaloop.swf?clip_id=9802683&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=00ADEF&amp;fullscreen=1' type='application/x-shockwave-flash' allowfullscreen='true' allowscriptaccess='always' width='640' height='480'></embed></object>",
-                                  Level = DifficultyLevel.Beginner,
+                                  MovieHTML = "<object width='640' height='480'><param name='allowfullscreen' value='true' /><param name='allowscriptaccess' value='always' /><param name='movie' value='http://vimeo.com/moogaloop.swf?clip_id=9802683&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=00ADEF&amp;fullscreen=1' /><embed src='http://vimeo.com/moogaloop.swf?clip_id=9802683&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=00ADEF&amp;fullscreen=1' type='application/x-shockwave-flash' allowfullscreen='true' allowscriptaccess='always' width='640' height='480'></embed></object>",    
                                   Tags = new List<Tag>
                                              {
-                                                 new Tag{ Name = "MonoRail" }
+                                                 new Tag{ Name = "MonoRail" },
+                                                 new Tag{ Name = "Beginner" }
                                              },
                                   Links = new List<Link>
                                              {
@@ -57,7 +56,12 @@ namespace AndyPike.Castlecasts.Website
                                                  new Link{ Text = "Episode Source", Url = "http://github.com/andypike/Castlecasts/tree/master/Episodes/src/Ep001-GettingStartedWithMonoRail/AndyPike.Castlecasts.GettingStartedWithMonoRail/" },
                                                  new Link{ Text = "MonoRail 2.0 Download", Url = "http://sourceforge.net/projects/castleproject/files/MonoRail/2.0/" },
                                                  new Link{ Text = "CastleProject Home", Url = "http://castleproject.org" }
-                                             }
+                                             },
+                                  Comments = new List<Comment>
+                                                 {
+                                                     new Comment{ CreatedAt = DateTime.UtcNow, Name = "Andy", Email = "andy@andypike.com", Text = "This is my comment" },
+                                                     new Comment{ CreatedAt = DateTime.UtcNow.AddDays(-2), Name = "Andy", Email = "andy@andypike.com", Text = "Another comment" }
+                                                 }
                               };
                 ep1.Save();
             }
@@ -103,7 +107,7 @@ namespace AndyPike.Castlecasts.Website
                           .DefaultForController().Is("Episodes")
                           .DefaultForAction().Is("Index"));
 
-            rules.Add(new PatternRoute("episodes", "<controller>/<episode>/<action>")
+            rules.Add(new PatternRoute("episodes", "<controller>/<episode>/<action>/<title>")
                           .DefaultForController().Is("Episodes")
                           .Restrict("episode").ValidInteger
                           .DefaultForAction().Is("Index"));

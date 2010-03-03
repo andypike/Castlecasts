@@ -1,3 +1,4 @@
+using System;
 using Castle.ActiveRecord;
 using Castle.ActiveRecord.Linq;
 
@@ -16,7 +17,7 @@ namespace AndyPike.Castlecasts.Website.Models
         public string Email { get; set; }
 
         [Property]
-        public string WebsiteUrl { get; set; }
+        public DateTime CreatedAt { get; set; }
 
         [Property(SqlType = "nvarchar(max)")]
         public string Text { get; set; }
