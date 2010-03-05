@@ -7,10 +7,36 @@
 	<property name="solution.dir" value="../src"/>     
 	<property name="solution.file" value="${solution.dir}/AndyPike.Castlecasts.Website.sln"/>     
 	<property name="build.configuration" value="debug" />      
+	<property name="application.dir" value="${solution.dir}/AndyPike.Castlecasts.Website" />
+	<property name="deploy.dir" value="C:/websites/castle/casts">
 	
 	<target name="compile">
 		<exec program="${framework::get-framework-directory(framework::get-target-framework())}\msbuild.exe"         
-			commandline="${solution.file} /t:Clean /p:Configuration=${build.configuration} /v:q" workingdir="." />     
+			  commandline="${solution.file} /t:Clean /p:Configuration=${build.configuration} /v:q" workingdir="." />     
 	</target>      
+
+	<!--<target name="deploy" depends="compile">
+		<copy todir="${deploy.dir}/bin" overwrite="true">
+			<fileset basedir="${application.dir}/bin">
+		        <include name="*.dll" />
+		    </fileset>
+		</copy>
+		
+		<copy todir="${deploy.dir}/Content" overwrite="true">
+			<fileset basedir="${application.dir}/Content">
+		        <include name="**/*.*" />
+		    </fileset>
+		</copy>
+		
+		<copy todir="${deploy.dir}/Views" overwrite="true">
+			<fileset basedir="${application.dir}/Views">
+		        <include name="**/*.vm" />
+		    </fileset>
+		</copy>
+		
+		<copy file="${application.dir}/Default.aspx" tofile="${deploy.dir}/Default.aspx" />
+		<copy file="${application.dir}/Global.asax" tofile="${deploy.dir}/Global.asax" />
+		<copy file="${application.dir}/Web.config" tofile="${deploy.dir}/Web.config" />
+	</target>-->
 
 </project>
