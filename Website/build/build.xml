@@ -8,7 +8,7 @@
 	<property name="solution.file" value="${solution.dir}/AndyPike.Castlecasts.Website.sln"/>     
 	<property name="build.configuration" value="debug" />      
 	<property name="application.dir" value="${solution.dir}/AndyPike.Castlecasts.Website" />
-	<property name="deploy.dir" value="C:/websites/castle/casts">
+	<property name="deploy.dir" value="C:/websites/castle/casts" />
 	
 	<target name="compile">
 		<exec program="${framework::get-framework-directory(framework::get-target-framework())}\msbuild.exe"         
