@@ -1,0 +1,16 @@
+<?xml version="1.0" ?> 
+
+<project name="nant" default="compile" xmlns="http://nant.sf.net/schemas/nant.xsd">      
+	
+	<property name="nant.settings.currentframework" value="net-3.5" />
+	<property name="project.rootdirectory" value="." />
+	<property name="solution.dir" value="../src"/>     
+	<property name="solution.file" value="${solution.dir}/AndyPike.Castlecasts.Website.sln"/>     
+	<property name="build.configuration" value="debug" />      
+	
+	<target name="compile">
+		<exec program="${framework::get-framework-directory(framework::get-target-framework())}\msbuild.exe"         
+			commandline="${solution.file} /t:Clean /p:Configuration=${build.configuration} /v:q" workingdir="." />     
+	</target>      
+
+</project>
