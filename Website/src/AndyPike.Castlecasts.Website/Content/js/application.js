@@ -6,5 +6,9 @@
             form.submit();
         }
     });
-    
+
+    $("#header").click(function() {
+        location.href = '/';
+    });
+
 });

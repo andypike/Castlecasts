@@ -4,15 +4,12 @@
     
 #foreach($episode in $episodes)
     <div class="episode">
-        <h2><em>#${episode.Id}</em> $Url.Link($x.h($episode.Title), "%{controller='Episodes', action='Show', params={episode=$episode.Id, title=$episode.SeoTitle}}")</h2>
-        <p>
-            <div class="user">
-                <div>$gravatar.image($episode.CreatedBy.Email, "%{size='32'}")</div>
-                <div>By $x.h($episode.CreatedBy.FullName)</div>
-                <div>On $episode.CreatedAt.ToShortDateString()</div>
-            </div> 
-            $x.h($episode.Description)
-        </p>
+        <div class="box">
+            <div class="number">#${episode.Id}</div>
+            <div class="date">$episode.CreatedAt.ToShortDateString()</div>
+        </div>
+        <h2>$Url.Link($x.h($episode.Title), "%{controller='Episodes', action='Show', params={episode=$episode.Id, title=$episode.SeoTitle}}")</h2>
+        <p>$x.h($episode.Description)</p>
         <p>
             <div class="tags"> 
                 #foreach($tag in $episode.Tags)

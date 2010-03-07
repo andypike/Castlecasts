@@ -8,20 +8,31 @@ body {
     margin: 0px;
     width: 100%;
     height: 100%;
+    font-family: Tahoma, Arial, Helvetica;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 3px;
 }
 
 h1, h2, h3 {
+    color: #871500;
     margin-top: 0;
 }
 
 h2 a, h2 a:visited {
-    color: #de8302;
+    color: #871500;
+    text-decoration: none;
 }
 
-h2 em {
-    background: #de8302;
-    padding: 6px;
-    color: #fff;
+h2 a:hover {
+    text-decoration: underline;
 }
 
 form {
@@ -50,16 +61,35 @@ form {
     }
 }
 
-@radius: 5px;
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
 
 .flash-error, .flash-notice, .flash-success {
     padding: 10px 10px 10px 27px;
     font-weight: bold;
     
-    -moz-border-radius-bottomleft: @radius;
-    -moz-border-radius-bottomright: @radius;
-    -moz-border-radius-topleft: @radius;
-    -moz-border-radius-topright: @radius;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
 }
 
 .flash-error {

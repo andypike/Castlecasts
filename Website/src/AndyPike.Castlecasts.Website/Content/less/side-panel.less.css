@@ -1,11 +1,9 @@
 ﻿#side-panel {
-    width: 210px;
+    width: 175px;
     float: right;
     background: #fff;
-    margin-left: 10px;
-    padding: 15px;
-    -moz-border-radius-bottomleft: 20px;
-    -moz-border-radius-bottomright: 20px;
-    -moz-border-radius-topleft: 20px;
-    -moz-border-radius-topright: 20px;
+    margin: 0 20px 20px 0;
+    padding: 10px;
+    border: solid 1px #ccc;
+    background: #efefef;
 }

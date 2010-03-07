@@ -2,17 +2,20 @@
     width: 950px;
     margin: auto;
     padding: 0px;
+    background-color: #fff;
+}
+
+#wrapper {
+    background: #fff;
 }
 
 #content {
     padding: 20px;
+    margin: 0;
     background: #fff;
-    margin: 0px;
+    width: 672px;
     float: left;
-    width: 660px;
-    
-    -moz-border-radius-bottomleft: 20px;
-    -moz-border-radius-bottomright: 20px;
-    -moz-border-radius-topleft: 20px;
-    -moz-border-radius-topright: 20px;
+    background-image: url(../images/content-fade.gif);
+    background-repeat: no-repeat;
+    background-position: right top;
 }
