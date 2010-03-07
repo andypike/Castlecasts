@@ -15,19 +15,22 @@ namespace AndyPike.Castlecasts.Website.Models
         [PrimaryKey]
         public int Id { get; set; }
 
-        [Property]
+        [Property(NotNull = true, Length = 255)]
         public string Title { get; set; }
 
-        [Property(SqlType = "nvarchar(max)")]
+        [Property(NotNull = true, SqlType = "nvarchar(max)")]
         public string Description { get; set; }
 
-        [Property(SqlType = "nvarchar(max)")]
+        [Property(NotNull = true, SqlType = "nvarchar(max)")]
         public string MovieHTML { get; set; }
 
-        [Property]
+        [Property(NotNull = true, SqlType = "nvarchar(max)")]
+        public string InfoHTML { get; set; }
+
+        [Property(NotNull = true)]
         public DateTime CreatedAt { get; set; }
 
-        [BelongsTo]
+        [BelongsTo(NotNull = true)]
         public User CreatedBy { get; set; }
 
         [HasAndBelongsToMany(Table = "EpisodeTag", ColumnKey = "Episode_Id", ColumnRef = "Tag_Id", Cascade = ManyRelationCascadeEnum.SaveUpdate)]
@@ -35,9 +38,6 @@ namespace AndyPike.Castlecasts.Website.Models
 
         [HasMany(Cascade = ManyRelationCascadeEnum.SaveUpdate, OrderBy = "CreatedAt ASC")]
         public IList<Comment> Comments { get; set; }
-
-        [HasMany(Cascade = ManyRelationCascadeEnum.SaveUpdate)]
-        public IList<Link> Links { get; set; }
 
         public string SeoTitle
         {
@@ -52,12 +52,13 @@ namespace AndyPike.Castlecasts.Website.Models
 
         public static IPaginatedPage<Episode> GetLatestEpisodesPaged(int page, int pageSize)
         {
-            return PaginatedFind(Queryable.OrderBy(e => e.CreatedAt), page, pageSize);
+            return PaginatedFind(Queryable
+                .OrderByDescending(e => e.CreatedAt), page, pageSize);
         }
 
 
 
-        //TODO: Fork and add this to the trunk
+        //TODO: Fork and send pull request
         public static IPaginatedPage<T> PaginatedFind<T>(IQueryable<T> query, int page, int pageSize)
         {
             page = (page == 0) ? 1 : page;
@@ -72,6 +73,21 @@ namespace AndyPike.Castlecasts.Website.Models
             int count = query.Count();
 
             return PaginationHelper.CreateCustomPage(matches, pageSize, page, count);
+        }
+
+        public void UpdateTags(string input, char separator)
+        {
+            Tags = new List<Tag>();
+
+            string[] tagNames = input.Split(separator);
+            foreach (var tagName in tagNames)
+            {
+                //Look up the tag first
+                string name = tagName;
+                Tag tag = Tag.Queryable.Where(t => t.Name == name).FirstOrDefault() ?? new Tag {Name = name};
+
+                Tags.Add(tag);
+            }
         }
     }
 }

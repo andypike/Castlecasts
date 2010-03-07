@@ -1,0 +1,19 @@
+﻿#capturefor(title)
+    Login
+#end
+
+<form action="$url.for("%{controller='Sessions', action='Create'}")" method="post">
+    <p>
+        $form.labelFor("email", "Email:", "%{class='field'}")
+        $form.textField("email", "%{class='required email'}")
+        <em>*</em>
+    </p>
+    <p>
+        $form.labelFor("password", "Password:", "%{class='field'}")
+        $form.passwordField("password", "%{class='required'}")
+        <em>*</em>
+    </p>
+    <p>
+        $form.submit("Login")
+    </p>
+</form>

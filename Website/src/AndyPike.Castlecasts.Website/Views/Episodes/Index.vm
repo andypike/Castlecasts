@@ -4,21 +4,23 @@
     
 #foreach($episode in $episodes)
     <div class="episode">
-        <h2><em>#${episode.Id}</em> $Url.Link($episode.Title, "%{controller='Episodes', action='Show', params={episode=$episode.Id, title=$episode.SeoTitle}}")</h2>
+        <h2><em>#${episode.Id}</em> $Url.Link($x.h($episode.Title), "%{controller='Episodes', action='Show', params={episode=$episode.Id, title=$episode.SeoTitle}}")</h2>
         <p>
             <div class="user">
                 <div>$gravatar.image($episode.CreatedBy.Email, "%{size='32'}")</div>
-                <div>By $episode.CreatedBy.FullName</div>
+                <div>By $x.h($episode.CreatedBy.FullName)</div>
                 <div>On $episode.CreatedAt.ToShortDateString()</div>
             </div> 
-            $episode.Description
+            $x.h($episode.Description)
         </p>
         <p>
             <div class="tags"> 
                 #foreach($tag in $episode.Tags)
-                    <span class="tag">$tag.Name</span>
+                    <span class="tag">$x.h($tag.Name)</span>
                 #end
             </div>
         </p>
     </div>
 #end
+
+<div class="pagination">#component(DiggStylePagination with "page=$episodes")</div>

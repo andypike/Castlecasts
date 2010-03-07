@@ -3,46 +3,45 @@
 #end
 
 <div class="episode">
-    <p>$episode.Description</p>
+    <p>$x.h($episode.Description)</p>
     <p>$episode.MovieHTML</p>
 
-    <h2>Links</h2>
-    <ul>
-        #foreach($link in $episode.Links)
-            <li><a href="$link.Url" target="_blank">$link.Text</a></li>
-        #end
-    </ul>
+    <h2>Further Information</h2>
+    <p>$episode.InfoHTML</p>
 
     <h2>$episode.Comments.Count Comments</h2>
     #foreach($comment in $episode.Comments)
         <div class="comment">
             <div class="user">
                 <div>$gravatar.image($comment.Email, "%{size='32'}")</div>
-                <div>By $comment.Name</div>
+                <div>By $x.h($comment.Name)</div>
                 <div>On $comment.CreatedAt.ToShortDateString()</div>
             </div> 
-            $comment.Text
+            $x.h($comment.Text)
         </div>
     #end
     
     <h2>Add a comment</h2>
-    <form action="$url.for("%{controller='Episodes', action='CreateComment'}")" method="post">
-        $form.hiddenField("episode.id")
+    <form action="$url.for("%{controller='Comments', action='Create'}")" method="post">
+        $form.hiddenField("comment.episode.id", $episode.id)
         
         <p>
-            $form.labelFor("comment.Name", "Name:")
-            $form.textField("comment.Name")
+            $form.labelFor("comment.Name", "Name:", "%{class='field'}")
+            $form.textField("comment.Name", "%{class='required'}")
+            <em>*</em>
         </p>
         <p>
-            $form.labelFor("comment.Email", "Email:")
-            $form.textField("comment.Name")
+            $form.labelFor("comment.Email", "Email:", "%{class='field'}")
+            $form.textField("comment.Email", "%{class='email'}")
         </p>
         <p>
-            $form.labelFor("comment.Text", "Your Comment:")
-            $form.textarea("comment.Text")
+            $form.labelFor("comment.Text", "Your Comment:", "%{class='field'}")
+            $form.textarea("comment.Text", "%{class='required'}")
+            <em>*</em>
         </p>
         <p>
             $form.submit("Add Comment")
         </p>
     </form>
+
 </div>

@@ -1,6 +1,10 @@
 ﻿.episode {
+    clear: both;
+    margin-bottom: 40px;
+    
     .tags {
         clear: both;
+        margin-bottom: 20px;
     }
     
     .tag {
@@ -26,18 +30,4 @@
             margin-bottom: 3px;
         }
     } 
-    
-    .comment {
-        border: solid 1px #ccc;
-        background: #efefef;
-        padding: 7px;
-        float: left;
-        width: 640px;
-        margin-bottom: 10px;
-        
-        .user {
-            float: left;
-            margin: 0 10px 0 0;
-        }
-    }
 }

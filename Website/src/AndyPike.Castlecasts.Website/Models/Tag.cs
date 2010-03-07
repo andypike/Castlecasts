@@ -10,7 +10,7 @@ namespace AndyPike.Castlecasts.Website.Models
         [PrimaryKey]
         public int Id { get; set; }
 
-        [Property]
+        [Property(NotNull = true, Length = 50, Unique = true)]
         public string Name { get; set; }
 
         [HasAndBelongsToMany(Table = "EpisodeTag", ColumnKey = "Tag_Id", ColumnRef = "Episode_Id", Inverse = true)]

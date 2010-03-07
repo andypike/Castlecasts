@@ -1,0 +1,15 @@
+﻿#capturefor(title)
+    Admin Dashboard
+#end
+
+<h2>Episodes</h2>
+<p>$url.link("Add a new Episode", "%{controller='admin', action='NewEpisode'}")</p>
+<table>
+#foreach($episode in $episodes)
+    <tr>
+        <td>#$episode.Id</td>
+        <td>$Url.Link($episode.Title, "%{controller='Episodes', action='Show', params={episode=$episode.Id, title=$episode.SeoTitle}}")</td>
+        <td>$url.link("Edit", "%{controller='Admin', action='EditEpisode', params={id=$episode.Id}}")</td>
+    </tr>
+#end
+</table>

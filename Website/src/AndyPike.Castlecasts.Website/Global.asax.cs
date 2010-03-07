@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.IO;
 using System.Reflection;
 using System.Web;
 using AndyPike.Castlecasts.Website.Models;
@@ -30,40 +29,18 @@ namespace AndyPike.Castlecasts.Website
         {
             using(new SessionScope())
             {
-                var andy = new User
+                User[] users = ActiveRecordBase<User>.FindAll();
+                if (users.Length != 0) return;
+                
+                var defaultUser = new User
                                {
                                    FirstName = "Andy",
                                    LastName = "Pike",
-                                   Email = "andy@andypike.com"
+                                   Email = "andy@andypike.com",
+                                   PasswordSalt = "a5cdbd8d-b160-4249-b726-034d16f4c762",
+                                   PasswordHash = "2F884D20EBE8F4F8CA1BB79DAE1250F5"
                                };
-                andy.Save();
-
-                var ep1 = new Episode
-                              {
-                                  CreatedAt = DateTime.UtcNow,
-                                  CreatedBy = andy,
-                                  Title = "Getting started with MonoRail",
-                                  Description = "Shows how to create your first Castle MonoRail application. Takes you through from downloading the required assemblies, creating a project, configuration and getting your first page showing in the browser.",
-                                  MovieHTML = "<object width='640' height='480'><param name='allowfullscreen' value='true' /><param name='allowscriptaccess' value='always' /><param name='movie' value='http://vimeo.com/moogaloop.swf?clip_id=9802683&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=00ADEF&amp;fullscreen=1' /><embed src='http://vimeo.com/moogaloop.swf?clip_id=9802683&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=00ADEF&amp;fullscreen=1' type='application/x-shockwave-flash' allowfullscreen='true' allowscriptaccess='always' width='640' height='480'></embed></object>",    
-                                  Tags = new List<Tag>
-                                             {
-                                                 new Tag{ Name = "MonoRail" },
-                                                 new Tag{ Name = "Beginner" }
-                                             },
-                                  Links = new List<Link>
-                                             {
-                                                 new Link{ Text = "Download Episode 1024x768 (52.24MB)", Url = "http://vimeo.com/download/video:16626583?v=2&e=1267492075&h=38072b1955b6b902631c60f9ef45508f&uh=a5175021d3ea5f2d2a373176f6c730af"},
-                                                 new Link{ Text = "Episode Source", Url = "http://github.com/andypike/Castlecasts/tree/master/Episodes/src/Ep001-GettingStartedWithMonoRail/AndyPike.Castlecasts.GettingStartedWithMonoRail/" },
-                                                 new Link{ Text = "MonoRail 2.0 Download", Url = "http://sourceforge.net/projects/castleproject/files/MonoRail/2.0/" },
-                                                 new Link{ Text = "CastleProject Home", Url = "http://castleproject.org" }
-                                             },
-                                  Comments = new List<Comment>
-                                                 {
-                                                     new Comment{ CreatedAt = DateTime.UtcNow, Name = "Andy", Email = "andy@andypike.com", Text = "This is my comment" },
-                                                     new Comment{ CreatedAt = DateTime.UtcNow.AddDays(-2), Name = "Andy", Email = "andy@andypike.com", Text = "Another comment" }
-                                                 }
-                              };
-                ep1.Save();
+                defaultUser.Save();
             }
         }
 
@@ -93,12 +70,25 @@ namespace AndyPike.Castlecasts.Website
             get { return container; }
         }
 
-        private static void InitializeActiveRecord()
+        private void InitializeActiveRecord()
         {
             IConfigurationSource config = ActiveRecordSectionHandler.Instance;
-
             ActiveRecordStarter.Initialize(Assembly.GetExecutingAssembly(), config);
-            ActiveRecordStarter.CreateSchema();
+
+            MigrateDatabase();
+        }
+
+        private void MigrateDatabase()
+        {
+            //Run migrations to keep the db up-to-date.
+            //Currently migration files will be run multiple times and errors are 
+            //swallowed by AR, need to clean this up
+            string migrationsFolder = Server.MapPath("/Migrations");
+            string[] migrationFiles = Directory.GetFiles(migrationsFolder, "*.sql");
+            foreach (var migrationFile in migrationFiles)
+            {
+                ActiveRecordStarter.CreateSchemaFromFile(migrationFile);
+            }
         }
 
         private static void RegisterRoutes(IRoutingRuleContainer rules)
@@ -107,12 +97,12 @@ namespace AndyPike.Castlecasts.Website
                           .DefaultForController().Is("Episodes")
                           .DefaultForAction().Is("Index"));
 
-            rules.Add(new PatternRoute("episodes", "<controller>/<episode>/<action>/<title>")
+            rules.Add(new PatternRoute("episodes", "Episodes/<episode>/<action>/<title>")
                           .DefaultForController().Is("Episodes")
                           .Restrict("episode").ValidInteger
                           .DefaultForAction().Is("Index"));
 
-            rules.Add(new PatternRoute("standard", "[controller]/[id]/[action]")
+            rules.Add(new PatternRoute("standard", "[controller]/[action]/[id]")
                           .DefaultForController().Is("Episodes")
                           .Restrict("id").ValidInteger
                           .DefaultForAction().Is("Index"));

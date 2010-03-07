@@ -1,0 +1,13 @@
+﻿#capturefor(title)
+    Edit Episode
+#end
+
+<form action="$url.for("%{controller='Admin', action='UpdateEpisode'}")" method="post">
+    $form.hiddenField("episode.id")
+    
+    #parse("Admin/_EpisodeForm.vm")
+    
+    <p>
+        $form.submit("Save Changes")
+    </p>
+</form>

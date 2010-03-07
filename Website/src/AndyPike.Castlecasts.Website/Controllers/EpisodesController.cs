@@ -1,18 +1,13 @@
-using AndyPike.Castlecasts.Website.Helpers;
 using AndyPike.Castlecasts.Website.Models;
 using Castle.MonoRail.ActiveRecordSupport;
-using Castle.MonoRail.Framework;
 
 namespace AndyPike.Castlecasts.Website.Controllers
 {
-    [Layout("Default"), Rescue("500")]
-    [Helper(typeof(AntiXssHelper), "x")]
-    [Helper(typeof(GravatarHelper), "gravatar")]
-    public class EpisodesController : ARSmartDispatcherController
+    public class EpisodesController : ControllerBase
     {
-        public void Index()
+        public void Index(int page)
         {
-            PropertyBag["episodes"] = Episode.GetLatestEpisodesPaged(1, 10);
+            PropertyBag["episodes"] = Episode.GetLatestEpisodesPaged(page, 10);
         }
 
         public void Show([ARFetch]Episode episode)

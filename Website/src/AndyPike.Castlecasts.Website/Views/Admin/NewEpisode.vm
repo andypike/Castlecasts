@@ -1,0 +1,11 @@
+﻿#capturefor(title)
+    New Episode
+#end
+
+<form action="$url.for("%{controller='Admin', action='CreateEpisode'}")" method="post">
+    #parse("Admin/_EpisodeForm.vm")
+    
+    <p>
+        $form.submit("Add Episode")
+    </p>
+</form>

@@ -1,0 +1,25 @@
+﻿<p>
+    $form.labelFor("episode.Title", "Title:", "%{class='field'}")
+    $form.textField("episode.Title", "%{class='required'}")
+    <em>*</em>
+</p>
+<p>
+    $form.labelFor("episode.Description", "Description:", "%{class='field'}")
+    $form.textarea("episode.Description", "%{class='required'}")
+    <em>*</em>
+</p>
+<p>
+    $form.labelFor("episode.MovieHTML", "Movie HTML:", "%{class='field'}")
+    $form.textarea("episode.MovieHTML", "%{class='required'}")
+    <em>*</em>
+</p>
+<p>
+    $form.labelFor("tags", "Tags:", "%{class='field'}")
+    $form.textField("tags", "%{class='required'}")
+    <em>*</em>
+</p>
+<p>
+    $form.labelFor("episode.InfoHTML", "Info HTML:", "%{class='field'}")
+    $form.textarea("episode.InfoHTML", "%{class='required'}")
+    <em>*</em>
+</p>

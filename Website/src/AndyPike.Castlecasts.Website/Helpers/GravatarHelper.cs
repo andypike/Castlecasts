@@ -15,6 +15,11 @@ namespace AndyPike.Castlecasts.Website.Helpers
 
         public string Url(string email)
         {
+            if(string.IsNullOrEmpty(email))
+            {
+                return "/Content/images/default-avatar.gif";
+            }
+
             email = email.ToLower().Trim();
 
             string emailAsMd5 = email.ToMD5();

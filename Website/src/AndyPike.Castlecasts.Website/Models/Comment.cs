@@ -10,19 +10,19 @@ namespace AndyPike.Castlecasts.Website.Models
         [PrimaryKey]
         public int Id { get; set; }
 
-        [Property]
+        [Property(NotNull = true, Length = 50)]
         public string Name { get; set; }
-        
+
         [Property]
         public string Email { get; set; }
 
         [Property]
         public DateTime CreatedAt { get; set; }
 
-        [Property(SqlType = "nvarchar(max)")]
+        [Property(NotNull = true, SqlType = "nvarchar(max)")]
         public string Text { get; set; }
 
-        [BelongsTo]
+        [BelongsTo(NotNull = true, Cascade = CascadeEnum.SaveUpdate)]
         public Episode Episode { get; set; }
     }
 }

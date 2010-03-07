@@ -24,3 +24,58 @@ h2 em {
     color: #fff;
 }
 
+form {
+    label.field {
+        display: block;
+        float: left;
+        width: 120px;
+    }   
+    
+    label.error {
+        color: #ff0000;
+        margin-left: 5px;
+    }
+    
+    em {
+        color: #ff0000;    
+    } 
+    
+    input[type='text'], input[type='password'], textarea {
+        width: 300px;
+        padding: 5px;   
+    }
+    
+    textarea {
+        height: 300px;    
+    }
+}
+
+@radius: 5px;
+
+.flash-error, .flash-notice, .flash-success {
+    padding: 10px 10px 10px 27px;
+    font-weight: bold;
+    
+    -moz-border-radius-bottomleft: @radius;
+    -moz-border-radius-bottomright: @radius;
+    -moz-border-radius-topleft: @radius;
+    -moz-border-radius-topright: @radius;
+}
+
+.flash-error {
+    color: #ff0000;
+    border: solid 1px #ff0000;
+    background: #FFD3DB url(../images/error.png) no-repeat 7px 10px;
+}
+
+.flash-notice {
+    color: #000;
+    border: solid 1px #FFB900;
+    background: #FEFFBF url(../images/notice.png) no-repeat 7px 10px;
+}
+
+.flash-success {
+    color: #051;
+    border: solid 1px #051;
+    background: #B3EFBF url(../images/success.png) no-repeat 7px 10px;
+}
