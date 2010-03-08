@@ -36,7 +36,7 @@ namespace AndyPike.Castlecasts.Website
                                {
                                    FirstName = "Andy",
                                    LastName = "Pike",
-                                   Email = "andy@andypike.com",
+                                   Email = "andy@castlecasts.com",
                                    PasswordSalt = "a5cdbd8d-b160-4249-b726-034d16f4c762",
                                    PasswordHash = "2F884D20EBE8F4F8CA1BB79DAE1250F5"
                                };

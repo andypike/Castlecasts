@@ -9,17 +9,16 @@
 	<property name="build.configuration" value="release" />      
 	<property name="application.dir" value="${solution.dir}/AndyPike.Castlecasts.Website" />
 	<property name="deploy.dir" value="C:/websites/castle/casts" />
-	
+  <property name="deploy.web.config" value="${deploy.dir}/Web.config" />
+  <property name="deploy.connection_string" value="Data Source=.;Integrated Security=SSPI;Initial Catalog=castlecasts" />
+  
 	<target name="compile">
 		<exec program="${framework::get-framework-directory(framework::get-target-framework())}\msbuild.exe"         
 			    commandline="${solution.file} /t:Rebuild /p:Configuration=${build.configuration} /v:q" workingdir="." />     
 	</target>
-
+  
 	<target name="deploy" depends="compile">
-    <delete file="${deploy.dir}/Andy.html" failonerror="false" />
-    <delete file="${deploy.dir}/index.htm" failonerror="false" />
-    
-		<copy todir="${deploy.dir}/bin" overwrite="true">
+    <copy todir="${deploy.dir}/bin" overwrite="true">
 			<fileset basedir="${application.dir}/bin">
 		        <include name="**/*.dll" />
 		    </fileset>
@@ -36,10 +35,30 @@
 		        <include name="**/*.vm" />
 		    </fileset>
 		</copy>
+
+    <copy todir="${deploy.dir}/Migrations" overwrite="true">
+      <fileset basedir="${application.dir}/Migrations">
+        <include name="**/*.sql" />
+      </fileset>
+    </copy>
 		
 		<copy file="${application.dir}/Default.aspx" tofile="${deploy.dir}/Default.aspx" />
 		<copy file="${application.dir}/Global.asax" tofile="${deploy.dir}/Global.asax" />
 		<copy file="${application.dir}/Web.config" tofile="${deploy.dir}/Web.config" />
 	</target>
+
+  <target name="configure" depends="deploy">
+    <xmlpoke file="${deploy.web.config}"
+             xpath="/configuration/dotless/@cache"
+             value="true" />
+    
+    <xmlpoke file="${deploy.web.config}"
+             xpath="/configuration/system.web/compilation/@debug"
+             value="false" />
+    
+    <xmlpoke file="${deploy.web.config}"
+             xpath="/configuration/activerecord/config/add[@key='connection.connection_string']/@value"
+             value="${deploy.connection_string}" />
+  </target>
 
 </project>

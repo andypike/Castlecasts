@@ -29,6 +29,9 @@ namespace AndyPike.Castlecasts.Website.Controllers
 
         public void Logout()
         {
+            CurrentUser.Token = null;
+            CurrentUser.Save();
+
             Session["token"] = null;
 
             Flash["success"] = "You have successfully logged out.";
