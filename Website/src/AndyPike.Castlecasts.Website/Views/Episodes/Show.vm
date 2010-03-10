@@ -2,6 +2,10 @@
     $episode.Title
 #end
 
+#capturefor(description)
+    $episode.Description
+#end
+
 <div class="episode">
     <p>$x.h($episode.Description)</p>
     <p>$episode.MovieHTML</p>
