@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title></title>
+</head>
+<body>
+    The greeting was: $!greeting <br />
+    The number was: $!number
+    
+    <form action="/Home/DisplayMessages" method="post">
+        <p><label>Message:</label><input type="text" name="messages" /></p>
+        <p><label>Message:</label><input type="text" name="messages" /></p>
+    
+    	<input type="submit" />
+    </form>
+    
+    <form action="/Home/DisplayUser" method="post">
+        <p><label>Name:</label><input type="text" name="user.Name" /></p>
+        <p><label>Email:</label><input type="text" name="user.Email" /></p>
+        <p><label>First Country Name:</label><input type="text" name="user.Countries[0].Name" /></p>
+        <p><label>First Country Code:</label><input type="text" name="user.Countries[0].Code" /></p>
+        <p><label>Second Country Name:</label><input type="text" name="user.Countries[1].Name" /></p>
+        <p><label>Second Country Code:</label><input type="text" name="user.Countries[1].Code" /></p>
+    	
+    	<input type="submit" />
+    </form>
+</html>
