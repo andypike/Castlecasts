@@ -11,8 +11,24 @@
 	<property name="deploy.dir" value="C:/websites/castle/casts" />
   <property name="deploy.web.config" value="${deploy.dir}/Web.config" />
   <property name="deploy.connection_string" value="Data Source=.;Integrated Security=SSPI;Initial Catalog=castlecasts" />
+  <property name="build.number" value="1" /> <!--This is provided by TeamCity-->
+  <property name="version.number" value="1.0.0.${build.number}" />
+
+  <target name="write-assembly-info">
+    <asminfo output="${application.dir}\Properties\AssemblyInfo.cs" language="CSharp">
+      <imports>
+        <import namespace="System.Reflection" />
+      </imports>
+      <attributes>
+        <attribute type="AssemblyCompanyAttribute" value="Andy Pike" />
+        <attribute type="AssemblyProductAttribute" value="Castlecasts.com Website" />
+        <attribute type="AssemblyVersionAttribute" value="${version.number}" />
+        <attribute type="AssemblyCopyrightAttribute" value="Copyright (c)2009 Andy Pike. All Rights Reserved." />
+      </attributes>
+    </asminfo>
+  </target>
   
-	<target name="compile">
+	<target name="compile" depends="write-assembly-info">
 		<exec program="${framework::get-framework-directory(framework::get-target-framework())}\msbuild.exe"         
 			    commandline="${solution.file} /t:Rebuild /p:Configuration=${build.configuration} /v:q" workingdir="." />     
 	</target>

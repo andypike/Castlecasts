@@ -19,3 +19,13 @@
     background-repeat: no-repeat;
     background-position: right top;
 }
+
+#footer {
+    font-size: 10px;
+    background: #871500;
+    padding: 10px;
+    color: #ddd;
+    a, a:visited {
+        color: #ddd;
+    }
+}
