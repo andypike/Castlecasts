@@ -1,18 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Castlecasts Episodes</title>     
         <link>http://www.castlecasts.com</link>
         <description>Screencasts for the various components of the popular open-source library the Castle Project.</description> 
         <lastBuildDate>$lastBuildDate</lastBuildDate>
-    </channel>
+        <atom:link href="http://feeds.feedburner.com/CastlecastsEpisodes" rel="self" type="application/rss+xml" />
     
-#foreach($episode in $episodes)
-    <item>
-        <title>$x.h($episode.Title)</title>
-        <link>http://www.castlecasts.com/Episodes/${episode.Id}/Show/${episode.SeoTitle}</link> 
-        <description>$x.h($episode.Description)</description>    
-        <pubDate>$episode.RssPubDate</pubDate>
-    </item>
-#end
+    #foreach($episode in $episodes)
+        <item>
+            <title>$x.h($episode.Title)</title>
+            <link>http://www.castlecasts.com/Episodes/${episode.Id}/Show/${episode.SeoTitle}</link> 
+            <description>$x.h($episode.Description)</description>    
+            <pubDate>$episode.RssPubDate</pubDate>
+        </item>
+    #end
+    </channel>
 </rss>
