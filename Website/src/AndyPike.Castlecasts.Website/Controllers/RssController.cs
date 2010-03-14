@@ -10,7 +10,7 @@ namespace AndyPike.Castlecasts.Website.Controllers
 
             Episode[] episodes = Episode.FindAllLatestFirst();
             PropertyBag["episodes"] = episodes;
-            PropertyBag["channelPubDate"] = episodes[0].RssPubDate;
+            PropertyBag["lastBuildDate"] = episodes[0].RssPubDate;
 
             CancelLayout();
         }

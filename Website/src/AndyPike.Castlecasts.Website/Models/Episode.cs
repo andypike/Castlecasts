@@ -52,10 +52,7 @@ namespace AndyPike.Castlecasts.Website.Models
 
         public string RssPubDate
         {
-            get
-            {
-                return CreatedAt.ToString("ddd, dd MMM yyyy 00:00:00 -0000");
-            }
+            get { return CreatedAt.ToString("ddd, dd MMM yyyy 00:00:00 +0000"); }
         }
 
         public static Episode[] FindAllLatestFirst()
