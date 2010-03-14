@@ -11,6 +11,10 @@ body {
     font-family: Tahoma, Arial, Helvetica;
 }
 
+a, a:visited {
+    color: #0000ff;
+}
+
 h1 {
     font-size: 28px;
 }

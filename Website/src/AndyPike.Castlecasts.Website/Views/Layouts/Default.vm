@@ -2,13 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         #if(!$description)
-            #set($description = "Screencasts for the various components of the CastleProject.")
+            #set($description = "Screencasts for the various components of the popular open-source library the Castle Project.")
         #end
         
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="google-site-verification" content="yv6a-2LwkhlkIHWBcGQRXSqW2CTnvsMRXDIovexCPzg" />
         <meta name="description" content="$x.h($description.Trim())" />
         
+        <link rel="alternate" type="application/rss+xml" title="Castlecasts Episodes RSS" href="http://www.castlecasts.com/Rss/Episodes" />
         <link rel="stylesheet" type="text/css" href="$siteroot/Content/less/screen.less.css?v=$version" />
 				
         <script type="text/javascript" src="$siteroot/Content/js/lib/jquery-1.3.2.min.js"></script>
@@ -51,7 +52,10 @@
                     $childContent
     	        </div>
         	    <div id="side-panel">
-    	            <h3>About</h3>
+        	        <h3>Feeds</h3>
+	                <p><img src="/content/images/rss.gif" alt="Rss" align="absmiddle" /> <a href="/Rss/Episodes" type="application/rss+xml">Episode RSS Feed</a></p>
+        	        
+        	        <h3>About</h3>
     	            <p>Castlecasts is a free resource of screencasts for all the components of the <a href="http://www.castleproject.org">CastleProject</a>.</p>
     	            <p>If you have a suggestion for a screencast or some feedback, <a href="http://castlecasts.uservoice.com" target="_blank">post your idea in the forum.</a></p>
 	                <p>If you want to contact me you can <a href="http://twitter.com/andypike">follow me on Twitter</a> or email me: andy[at]castlecasts.com.</p>

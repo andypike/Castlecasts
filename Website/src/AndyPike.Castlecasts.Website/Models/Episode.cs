@@ -50,6 +50,19 @@ namespace AndyPike.Castlecasts.Website.Models
             }
         }
 
+        public string RssPubDate
+        {
+            get
+            {
+                return CreatedAt.ToString("ddd, dd MMM yyyy 00:00:00 -0000");
+            }
+        }
+
+        public static Episode[] FindAllLatestFirst()
+        {
+            return Queryable.OrderByDescending(e => e.CreatedAt).ToArray();
+        }
+
         public static IPaginatedPage<Episode> GetLatestEpisodesPaged(int page, int pageSize)
         {
             return PaginatedFind(Queryable
