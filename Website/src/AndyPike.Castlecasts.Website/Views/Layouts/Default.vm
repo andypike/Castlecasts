@@ -9,7 +9,7 @@
         <meta name="google-site-verification" content="yv6a-2LwkhlkIHWBcGQRXSqW2CTnvsMRXDIovexCPzg" />
         <meta name="description" content="$x.h($description.Trim())" />
         
-        <link rel="alternate" type="application/rss+xml" title="Castlecasts Episodes RSS" href="http://www.castlecasts.com/Rss/Episodes" />
+        <link rel="alternate" type="application/rss+xml" title="Castlecasts Episodes RSS" href="http://feeds.feedburner.com/CastlecastsEpisodes" />
         <link rel="stylesheet" type="text/css" href="$siteroot/Content/less/screen.less.css?v=$version" />
 				
         <script type="text/javascript" src="$siteroot/Content/js/lib/jquery-1.3.2.min.js"></script>
@@ -53,7 +53,7 @@
     	        </div>
         	    <div id="side-panel">
         	        <h3>Feeds</h3>
-	                <p><img src="/content/images/rss.gif" alt="Rss" align="absmiddle" /> <a href="/Rss/Episodes" type="application/rss+xml">Episode RSS Feed</a></p>
+	                <p><img src="/content/images/rss.gif" alt="Rss" align="absmiddle" /> <a href="http://feeds.feedburner.com/CastlecastsEpisodes" type="application/rss+xml">Episode RSS Feed</a></p>
         	        
         	        <h3>About</h3>
     	            <p>Castlecasts is a free resource of screencasts for all the components of the <a href="http://www.castleproject.org">CastleProject</a>.</p>
