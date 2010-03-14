@@ -13,6 +13,7 @@
             <link>http://www.castlecasts.com/Episodes/${episode.Id}/Show/${episode.SeoTitle}</link> 
             <description>$x.h($episode.Description)</description>    
             <pubDate>$episode.RssPubDate</pubDate>
+            <guid isPermaLink="true">http://www.castlecasts.com/Episodes/${episode.Id}/Show</guid>
         </item>
     #end
     </channel>
