@@ -26,12 +26,12 @@ h2 {
 }
 
 h1, h2, h3 {
-    color: #871500;
+    color: @brand_color;
     margin-top: 0;
 }
 
 h2 a, h2 a:visited {
-    color: #871500;
+    color: @brand_color;
     text-decoration: none;
 }
 

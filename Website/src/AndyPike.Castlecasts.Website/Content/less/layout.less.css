@@ -22,7 +22,7 @@
 
 #footer {
     font-size: 10px;
-    background: #871500;
+    background: @brand_color;
     padding: 10px;
     color: #ddd;
     a, a:visited {

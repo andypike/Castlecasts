@@ -53,13 +53,20 @@
     	        </div>
         	    <div id="side-panel">
         	        <h3>Feeds</h3>
-	                <p><img src="/content/images/rss.gif" alt="Rss" align="absmiddle" /> <a href="http://feeds.feedburner.com/castlecasts" type="application/rss+xml">Episode RSS Feed</a></p>
+	                <p><img src="/content/images/feed.png" alt="Rss" align="absmiddle" /> <a href="http://feeds.feedburner.com/castlecasts" type="application/rss+xml">Episode RSS Feed</a></p>
+        	        
+        	        <h3>Share</h3>
+        	        <p><script type="text/javascript" src="http://tweetmeme.com/i/scripts/button.js"></script></p>
         	        
         	        <h3>About</h3>
     	            <p>Castlecasts is a free resource of screencasts for all the components of the <a href="http://www.castleproject.org">CastleProject</a>.</p>
     	            <p>If you have a suggestion for a screencast or some feedback, <a href="http://castlecasts.uservoice.com" target="_blank">post your idea in the forum.</a></p>
-	                <p>If you want to contact me you can <a href="http://twitter.com/andypike">follow me on Twitter</a> or email me: andy[at]castlecasts.com.</p>
 	                <p>The source code for this site is also available as a sample Castle MonoRail project, <a href="http://github.com/andypike/Castlecasts/tree/master/Website/" target="_blank">take a look over at GitHub</a>.</p>
+	            
+	                <h3>Get in Touch</h3>
+	                <p><img src="/content/images/twitter.png" alt="Twitter" align="absmiddle" /> <a href="http://twitter.com/andypike">Follow me on Twitter</a></p>
+	                <p><img src="/content/images/email.png" alt="Email" align="absmiddle" /> andy[at]castlecasts.com</p>
+
 	            </div>
     	    </div>
     	    <div id="footer">Castlecasts.com v$version. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons License</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="Creative Commons License" style="border-width:0" align="absmiddle" src="http://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" /></a></div>   
@@ -85,7 +92,7 @@
     	        showTab: true,
     	        /* optional */
     	        alignment: 'left',
-    	        background_color: '#871500',
+    	        background_color: '#6675a0',
     	        text_color: 'white',
     	        hover_color: '#06C',
     	        lang: 'en'
