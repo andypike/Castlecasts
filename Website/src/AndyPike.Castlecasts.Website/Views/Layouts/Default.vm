@@ -14,6 +14,7 @@
 				
         <script type="text/javascript" src="$siteroot/Content/js/lib/jquery-1.3.2.min.js"></script>
         <script type="text/javascript" src="$siteroot/Content/js/lib/jquery-validate-1.5.5.min.js"></script>
+        <script type="text/javascript" src="$siteroot/Content/js/lib/jquery.tweet.js"></script>
         <script type="text/javascript" src="$siteroot/Content/js/application.js?v=$version"></script>
                 
 		$!head
@@ -66,7 +67,9 @@
 	                <h3>Get in Touch</h3>
 	                <p><img src="/content/images/twitter.png" alt="Twitter" align="absmiddle" /> <a href="http://twitter.com/andypike">Follow me on Twitter</a></p>
 	                <p><img src="/content/images/email.png" alt="Email" align="absmiddle" /> andy[at]castlecasts.com</p>
-
+                    
+                    <h3>#castlecasts on Twitter</h3>
+                    <div class="tweet"></div>
 	            </div>
     	    </div>
     	    <div id="footer">Castlecasts.com v$version. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons License</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="Creative Commons License" style="border-width:0" align="absmiddle" src="http://i.creativecommons.org/l/by-nc-nd/3.0/80x15.png" /></a></div>   
