@@ -14,7 +14,7 @@
     $(".tweet").tweet({
         avatar_size: 32,
         count: 4,
-        query: "%23castlecasts",
+        query: "castlecasts",
         loading_text: "searching twitter..."
     });
 
