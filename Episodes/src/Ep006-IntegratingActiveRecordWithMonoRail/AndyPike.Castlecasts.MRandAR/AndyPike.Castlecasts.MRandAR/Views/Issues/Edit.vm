@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Edit Issue</title>
+</head>
+<body>
+    <h1>Edit Issue</h1>
+
+    <form action="$url.for("%{Action='Update'}")" method="post">
+        $form.hiddenfield("issue.id")
+        <p>
+            $form.labelfor("issue.summary", "Summary")
+            $form.textfield("issue.summary")
+        </p>
+        <p>
+            $form.labelfor("issue.description", "Description")
+            $form.textarea("issue.description")
+        </p>
+        <p>
+            $form.labelfor("issue.project.id", "Project")
+            $form.select("issue.project.id", $projects, "%{value='Id', text='Name'}")
+        </p>
+        <p>
+            $form.labelfor("issue.type", "Type")
+            $form.select("issue.type", $types)
+        </p>
+        <p>
+            $form.submit("Update")
+        </p>
+    </form>
+</body>
+</html>
