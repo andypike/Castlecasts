@@ -7,8 +7,50 @@
     </boolean>
   </SettingsComponent>
   <RecentFiles>
-    <RecentFiles />
-    <RecentEdits />
+    <RecentFiles>
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/d:Models/f:IssueType.cs" caret="141" fromTop="7" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/d:Models/f:Issue.cs" caret="150" fromTop="5" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/d:Models/f:Project.cs" caret="192" fromTop="6" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/d:Views/d:Home/f:Index.vm" caret="281" fromTop="6" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/d:Controllers/f:HomeController.cs" caret="223" fromTop="5" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/d:Views/d:Issues/f:New.vm" caret="859" fromTop="22" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/d:Views/d:Issues/f:Edit.vm" caret="354" fromTop="2" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/d:Controllers/f:IssuesController.cs" caret="95" fromTop="1" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/f:Default.aspx" caret="149" fromTop="6" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/f:Web.config" caret="1346" fromTop="18" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/f:Global.asax.cs" caret="725" fromTop="11" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/f:Global.asax.cs" caret="1654" fromTop="16" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/f:Web.config" caret="644" fromTop="7" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/f:Web.config" caret="317" fromTop="3" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/f:Web.config" caret="1151" fromTop="15" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/f:Web.config" caret="768" fromTop="10" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/f:Web.config" caret="2068" fromTop="14" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/f:Global.asax.cs" caret="424" fromTop="8" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/f:Global.asax.cs" caret="519" fromTop="11" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/f:Global.asax.cs" caret="0" fromTop="0" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/f:Web.config" caret="449" fromTop="7" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/d:Models/f:Project.cs" caret="432" fromTop="19" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/d:Models/f:Project.cs" caret="33" fromTop="0" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/d:Models/f:Issue.cs" caret="540" fromTop="16" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/d:Models/f:Issue.cs" caret="0" fromTop="0" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/f:Global.asax.cs" caret="778" fromTop="16" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/f:Global.asax.cs" caret="1156" fromTop="25" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/d:Controllers/f:HomeController.cs" caret="76" fromTop="0" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/d:Controllers/f:HomeController.cs" caret="346" fromTop="9" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/d:Views/d:Home/f:Index.vm" caret="553" fromTop="10" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/d:Views/d:Home/f:Index.vm" caret="958" fromTop="21" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/d:Views/d:Home/f:Index.vm" caret="218" fromTop="5" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/d:Views/d:Home/f:Index.vm" caret="337" fromTop="6" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/d:Views/d:Issues/f:New.vm" caret="976" fromTop="24" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/d:Controllers/f:IssuesController.cs" caret="445" fromTop="13" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/d:Controllers/f:IssuesController.cs" caret="598" fromTop="20" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/d:Views/d:Issues/f:Edit.vm" caret="1017" fromTop="24" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/d:Controllers/f:IssuesController.cs" caret="1023" fromTop="25" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/d:Controllers/f:IssuesController.cs" caret="911" fromTop="11" />
+      <File id="71E93818-1B2D-45EB-A8F9-4BAF7CE05E9A/d:Controllers/f:IssuesController.cs" caret="232" fromTop="4" />
+    </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
     <NAntPath value="" />
@@ -21,4 +63,16 @@
     </NUnitInstallDir>
     <UseAddins>Never</UseAddins>
   </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="public" priority="0" />
+      <Item value="void" priority="0" />
+      <Item value="Order" priority="1" />
+      <Item value="PropertyBag" priority="0" />
+      <Item value="new" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@AndyPike.Castlecasts.MRandAR.Models.Issue">
+      <Item value="FindAll`0" priority="1" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
 </Configuration>
