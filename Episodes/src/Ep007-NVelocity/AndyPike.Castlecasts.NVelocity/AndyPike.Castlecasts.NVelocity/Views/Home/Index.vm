@@ -1,0 +1,30 @@
+﻿#capturefor(title)
+    Home
+#end
+
+$url.link("New Issue", "%{Controller='Issues', Action='New'}")
+
+#foreach($issue in $issues)
+    #beforeall
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Summary</th>
+            <th>Type</th>
+            <th>Project</th>
+            <th></th>
+        </tr>
+    #each
+        <tr>
+            <td>$issue.Id</td>
+            <td>$issue.Summary</td>
+            <td><img src="/Content/Images/${issue.Type}.png" /> $issue.Type</td>
+            <td>$issue.Project.Name</td>
+            <td>$url.link("Edit", "%{Controller='Issues', Action='Edit', params={id=$issue.Id}}")</td>
+        </tr>
+    #afterall
+        </table>
+    #nodata
+        <p>There are no issues to display</p>
+#end
+

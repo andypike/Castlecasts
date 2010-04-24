@@ -1,0 +1,17 @@
+$form.hiddenfield("issue.id")
+<p>
+    $form.labelfor("issue.summary", "Summary")
+    $form.textfield("issue.summary")
+</p>
+<p>
+    $form.labelfor("issue.description", "Description")
+    $form.textarea("issue.description")
+</p>
+<p>
+    $form.labelfor("issue.project.id", "Project")
+    $form.select("issue.project.id", $projects, "%{value='Id', text='Name'}")
+</p>
+<p>
+    $form.labelfor("issue.type", "Type")
+    $form.select("issue.type", $types)
+</p>

@@ -1,0 +1,30 @@
+#macro(showexception $exc)
+	<h3>$exc.GetType().Name</h3>
+    
+    <h4>Message:</h4>
+    <p>$exc.Message</p>
+    	
+	#if($exc.StackTrace)
+		<h4>StackTrace:</h4>
+		<p>$exc.StackTrace</p>		
+	#end
+
+	#if($exc.InnerException)
+		#set($inner = $exc.InnerException)
+		#showexception($inner)
+	#end
+#end
+
+#capturefor(title)
+    Oops! Something went wrong!
+#end
+
+<p>This is an error page. You are seeing this page because something 
+went wrong and we weren't expecting it. Our developers have been 
+notified of the problem and will be working on a fix. The error details 
+are below.</p>
+
+<p>
+#set($exception = $context.LastException)
+#showexception($exception)
+</p>

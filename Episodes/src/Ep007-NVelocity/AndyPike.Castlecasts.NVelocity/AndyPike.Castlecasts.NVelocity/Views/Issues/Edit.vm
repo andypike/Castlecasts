@@ -1,0 +1,11 @@
+﻿#capturefor(title)
+    Edit Issue
+#end
+
+<form action="$url.for("%{Action='Update'}")" method="post">
+    #parse("Issues/_Form.vm")
+    <p>
+        $form.submit("Update")
+    </p>
+</form>
+
