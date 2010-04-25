@@ -1,5 +1,5 @@
 ﻿#capturefor(title)
-    $episode.Title
+    #$episode.Id $episode.Title
 #end
 
 #capturefor(description)
