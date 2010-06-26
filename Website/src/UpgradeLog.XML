@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="AndyPike.Castlecasts.Website">
+</Property><Property Name="Solution File" Value="C:\OpenSource\AndyPike\Castlecasts\Website\src\AndyPike.Castlecasts.Website.sln">
+</Property><Property Name="Date" Value="24 June 2010">
+</Property><Property Name="Time" Value="21:42">
+</Property></Properties><Event ErrorLevel="0" Project="AndyPike.Castlecasts.Website" Source="AndyPike.Castlecasts.Website\AndyPike.Castlecasts.Website.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="AndyPike.Castlecasts.Website" Source="AndyPike.Castlecasts.Website\AndyPike.Castlecasts.Website.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="AndyPike.Castlecasts.Website.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="AndyPike.Castlecasts.Website.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="AndyPike.Castlecasts.Website" Source="AndyPike.Castlecasts.Website\AndyPike.Castlecasts.Website.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

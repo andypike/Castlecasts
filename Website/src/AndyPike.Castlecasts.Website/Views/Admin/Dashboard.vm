@@ -2,7 +2,7 @@
     Admin Dashboard
 #end
 
-<h2>Episodes</h2>
+<h2>$episodes.Count Episodes</h2>
 <p>$url.link("Add a new Episode", "%{controller='admin', action='NewEpisode'}")</p>
 <table>
 #foreach($episode in $episodes)
@@ -10,6 +10,31 @@
         <td>#$episode.Id</td>
         <td>$Url.Link($episode.Title, "%{controller='Episodes', action='Show', params={episode=$episode.Id, title=$episode.SeoTitle}}")</td>
         <td>$url.link("Edit", "%{controller='Admin', action='EditEpisode', params={id=$episode.Id}}")</td>
+    </tr>
+#end
+</table>
+
+<h2>$comments.Count Comments</h2>
+<table>
+#foreach($comment in $comments)
+    <tr>
+        <td>$comment.Text</td>
+        <td>$comment.Name</td>
+        <td>$Url.Link($comment.episode.Title, "%{controller='Episodes', action='Show', params={episode=$comment.episode.Id, title=$comment.episode.SeoTitle}}")</td>
+        <td>$url.link("Delete", "%{controller='Admin', action='DeleteComment', params={id=$comment.Id}}")</td>
+    </tr>
+#end
+</table>
+
+<h2>$submissions.Count Submissions</h2>
+<table>
+    #foreach($submission in $submissions)
+    <tr>
+        <td>$submission.CreatedAt.ToString("dd MMM yy")</td>
+        <td>$submission.Title</td>
+        <td>$submission.Name</td>
+        <td>$submission.Status</td>
+        <td>$url.link("Details", "%{controller='Admin', action='ViewSubmission', params={id=$submission.Id}}")</td>
     </tr>
 #end
 </table>

@@ -1,4 +1,5 @@
-﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -11,6 +12,10 @@
     <RootNamespace>AndyPike.Castlecasts.Website</RootNamespace>
     <AssemblyName>AndyPike.Castlecasts.Website</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -178,11 +183,13 @@
     <Content Include="Content\less\twitter-search.less.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Migrations\0002_add-submissions.sql" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\RssController.cs" />
+    <Compile Include="Controllers\SubmissionsController.cs" />
     <Compile Include="Filters\AuthenticationFilter.cs" />
     <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\ControllerBase.cs" />
@@ -196,6 +203,8 @@
     <Compile Include="Helpers\AntiXssHelper.cs" />
     <Compile Include="Helpers\GravatarHelper.cs" />
     <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\Submission.cs" />
+    <Compile Include="Models\SubmissionStatus.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Tag.cs" />
     <Compile Include="Models\Episode.cs" />
@@ -206,6 +215,7 @@
     <None Include="Views\Admin\EditEpisode.vm" />
     <None Include="Views\Admin\Dashboard.vm" />
     <None Include="Views\Admin\NewEpisode.vm" />
+    <None Include="Views\Admin\ViewSubmission.vm" />
     <None Include="Views\Admin\_EpisodeForm.vm" />
     <None Include="Views\Rss\Episodes.vm" />
     <None Include="Views\Episodes\Index.vm" />
@@ -214,9 +224,11 @@
     <None Include="Views\Rescues\404.vm" />
     <None Include="Views\Rescues\500.vm" />
     <None Include="Views\Sessions\New.vm" />
+    <None Include="Views\Submissions\Index.vm" />
+    <None Include="Views\Submissions\ThankYou.vm" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

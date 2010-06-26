@@ -14,6 +14,8 @@ namespace AndyPike.Castlecasts.Website.Controllers
         public void Dashboard()
         {
             PropertyBag["episodes"] = Episode.FindAll(new Order("CreatedAt", false));
+            PropertyBag["comments"] = Comment.FindAll(new Order("CreatedAt", false));
+            PropertyBag["submissions"] = Submission.FindAll(new Order("CreatedAt", false));
         }
 
         public void NewEpisode()
@@ -32,10 +34,8 @@ namespace AndyPike.Castlecasts.Website.Controllers
             RedirectToAction("Dashboard");
         }
 
-        public void EditEpisode(int id)
+        public void EditEpisode([ARFetch("id")]Episode episode)
         {
-            Episode episode = Episode.Find(id);
-
             PropertyBag["episode"] = episode;
             PropertyBag["tags"] = string.Join(" ", episode.Tags.Select(t => t.Name).ToArray());
         }
@@ -46,6 +46,37 @@ namespace AndyPike.Castlecasts.Website.Controllers
             episode.Save();
 
             Flash["success"] = "The Castlecast was successfully updated.";
+            RedirectToAction("Dashboard");
+        }
+
+        public void DeleteComment([ARFetch("id")]Comment comment)
+        {
+            comment.Delete();
+
+            Flash["success"] = "The Castlecast was successfully deleted.";
+            RedirectToAction("Dashboard");
+        }
+
+        public void ViewSubmission([ARFetch("id")]Submission submission)
+        {
+            PropertyBag["submission"] = submission;
+        }
+
+        public void ApproveSubmission([ARFetch("id")]Submission submission)
+        {
+            submission.Status = SubmissionStatus.Accepted;
+            submission.Save();
+
+            Flash["success"] = "The Castlecast was approved.";
+            RedirectToAction("Dashboard");
+        }
+
+        public void RejectSubmission([ARFetch("id")]Submission submission)
+        {
+            submission.Status = SubmissionStatus.Rejected;
+            submission.Save();
+
+            Flash["success"] = "The Castlecast was rejected.";
             RedirectToAction("Dashboard");
         }
     }

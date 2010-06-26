@@ -1,0 +1,50 @@
+#capturefor(title)
+	$submission.Title
+#end
+
+<h2>Details of submission:</h2>
+<form>
+    <fieldset>
+        <h3>Who submitted this cast</h3>
+        <p>
+            $form.labelFor("submission.Name", "Your Name:", "%{class='field'}")
+            $form.textField("submission.Name", "%{class='required'}")
+            <em>*</em>
+        </p>
+        <p>
+            $form.labelFor("submission.Email", "Your Email:", "%{class='field'}")
+            $form.textField("submission.Email", "%{class='required email'}")
+            <em>*</em>
+        </p>
+    </fieldset>
+
+    <fieldset>
+        <h3>The Castlecast</h3>
+        <p>
+            $form.labelFor("submission.Title", "Title:", "%{class='field'}")
+            $form.textField("submission.Title", "%{class='required'}")
+            <em>*</em>
+        </p>
+        <p>
+            $form.labelFor("submission.Description", "Description:", "%{class='field'}")
+            $form.textArea("submission.Description", "%{class='required'}")
+            <em>*</em>
+        </p>
+        <p>
+            $submission.MovieHTML
+        </p>
+        <p>
+            $form.labelFor("submission.MovieHTML", "Movie Embed HTML:", "%{class='field'}")
+            $form.textArea("submission.MovieHTML", "%{class='required'}")
+            <em>*</em>
+        </p>
+        <p>
+            $form.labelFor("submission.ExtraInfo", "Extra Info:", "%{class='field'}")
+            $form.textArea("submission.ExtraInfo")
+        </p>
+    </fieldset>
+</form>
+
+<p>
+    $url.link("Approve", "%{controller='Admin', action='ApproveSubmission', params={id=$submission.Id}}") | $url.link("Reject", "%{controller='Admin', action='RejectSubmission', params={id=$submission.Id}}")
+</p>
