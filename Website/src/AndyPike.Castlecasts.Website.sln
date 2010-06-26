@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{19A1E4DE-D84B-434D-ABF6-50B43A2B36D4}"
 	ProjectSection(SolutionItems) = preProject
 		..\build\default.build = ..\build\default.build

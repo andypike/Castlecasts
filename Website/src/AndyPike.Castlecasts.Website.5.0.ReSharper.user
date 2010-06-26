@@ -1,0 +1,396 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Content/d:less/f:comments.less.css" caret="0" fromTop="0" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Content/d:less/f:screen.less.css" caret="21" fromTop="0" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Models/f:User.cs" caret="1161" fromTop="14" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Extensions/f:StringExtensions.cs" caret="359" fromTop="12" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Sessions/f:New.vm" caret="0" fromTop="0" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Content/d:less/f:layout.less.css" caret="224" fromTop="15" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Content/d:less/f:side-panel.less.css" caret="238" fromTop="10" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Episodes/f:Show.vm" caret="25" fromTop="1" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Models/f:Comment.cs" caret="702" fromTop="24" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Controllers/f:EpisodesController.cs" caret="197" fromTop="4" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Admin/f:_EpisodeForm.vm" caret="153" fromTop="3" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Admin/f:EditEpisode.vm" caret="276" fromTop="10" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Models/f:Episode.cs" caret="875" fromTop="17" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Content/d:less/f:episodes.less.css" caret="154" fromTop="7" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Content/d:less/f:global.less.css" caret="1016" fromTop="20" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Submissions/f:ThankYou.vm" caret="242" fromTop="5" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Models/f:Submission.cs" caret="1054" fromTop="11" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Models/f:SubmissionStatus.cs" caret="156" fromTop="7" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Controllers/f:SubmissionsController.cs" caret="476" fromTop="15" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Migrations/f:0001_create-tables.sql" caret="371" fromTop="0" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Migrations/f:0002_add-submissions.sql" caret="407" fromTop="12" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/f:Global.asax.cs" caret="2904" fromTop="6" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Admin/f:ViewSubmission.vm" caret="1551" fromTop="20" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Controllers/f:AdminController.cs" caret="2713" fromTop="20" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Episodes/f:Index.vm" caret="264" fromTop="7" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Admin/f:Dashboard.vm" caret="1115" fromTop="10" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Content/d:less/f:header.less.css" caret="210" fromTop="7" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Layouts/f:Default.vm" caret="1678" fromTop="11" />
+      <File id="19A1E4DE-D84B-434D-ABF6-50B43A2B36D4/f:default.build/l:C!?OpenSource?AndyPike?Castlecasts?Website?build?default.build" caret="1060" fromTop="16" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Submissions/f:Index.vm" caret="3009" fromTop="9" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Admin/f:ViewSubmission.vm" caret="1490" fromTop="8" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Admin/f:ViewSubmission.vm" caret="1490" fromTop="12" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Admin/f:ViewSubmission.vm" caret="1490" fromTop="18" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Admin/f:ViewSubmission.vm" caret="1490" fromTop="11" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Admin/f:ViewSubmission.vm" caret="103" fromTop="5" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Admin/f:ViewSubmission.vm" caret="595" fromTop="17" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Admin/f:ViewSubmission.vm" caret="1111" fromTop="16" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Admin/f:ViewSubmission.vm" caret="1328" fromTop="20" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Admin/f:ViewSubmission.vm" caret="815" fromTop="7" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Admin/f:ViewSubmission.vm" caret="334" fromTop="10" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Admin/f:ViewSubmission.vm" caret="546" fromTop="15" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Admin/f:ViewSubmission.vm" caret="1551" fromTop="20" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Controllers/f:AdminController.cs" caret="2469" fromTop="25" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Controllers/f:AdminController.cs" caret="2771" fromTop="25" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Controllers/f:AdminController.cs" caret="2713" fromTop="23" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Admin/f:Dashboard.vm" caret="1115" fromTop="10" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Submissions/f:Index.vm" caret="2696" fromTop="12" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Layouts/f:Default.vm" caret="1689" fromTop="11" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Content/d:less/f:header.less.css" caret="210" fromTop="7" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Submissions/f:Index.vm" caret="2694" fromTop="17" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Submissions/f:Index.vm" caret="163" fromTop="3" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Submissions/f:Index.vm" caret="267" fromTop="7" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Submissions/f:Index.vm" caret="2676" fromTop="18" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Submissions/f:Index.vm" caret="424" fromTop="7" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Submissions/f:Index.vm" caret="1942" fromTop="6" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Submissions/f:Index.vm" caret="1541" fromTop="3" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Submissions/f:Index.vm" caret="4418" fromTop="8" />
+      <File id="D7DB2D84-6A83-412C-A1C8-565B65EC9675/d:Views/d:Submissions/f:Index.vm" caret="3009" fromTop="9" />
+      <File id="19A1E4DE-D84B-434D-ABF6-50B43A2B36D4/f:default.build/l:C!?OpenSource?AndyPike?Castlecasts?Website?build?default.build" caret="1498" fromTop="24" />
+      <File id="19A1E4DE-D84B-434D-ABF6-50B43A2B36D4/f:default.build/l:C!?OpenSource?AndyPike?Castlecasts?Website?build?default.build" caret="184" fromTop="3" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="public" priority="31" />
+      <Item value="void" priority="15" />
+      <Item value="Resource" priority="0" />
+      <Item value="Rescue" priority="0" />
+      <Item value="Helper" priority="0" />
+      <Item value="typeof" priority="1" />
+      <Item value="int" priority="8" />
+      <Item value="PropertyBag" priority="7" />
+      <Item value="PrimaryKey" priority="0" />
+      <Item value="string" priority="14" />
+      <Item value="Property" priority="3" />
+      <Item value="Length" priority="4" />
+      <Item value="HasMany" priority="0" />
+      <Item value="SqlType" priority="0" />
+      <Item value="BelongsTo" priority="0" />
+      <Item value="HasAndBelongsToMany" priority="0" />
+      <Item value="IList" priority="1" />
+      <Item value="Episode" priority="14" />
+      <Item value="static" priority="1" />
+      <Item value="Queryable" priority="1" />
+      <Item value="e" priority="1" />
+      <Item value="AssemblyLoadEventHandler" priority="0" />
+      <Item value="return" priority="8" />
+      <Item value="container" priority="0" />
+      <Item value="using" priority="1" />
+      <Item value="new" priority="29" />
+      <Item value="SessionScope" priority="1" />
+      <Item value="var" priority="5" />
+      <Item value="User" priority="3" />
+      <Item value="FirstName" priority="1" />
+      <Item value="LastName" priority="1" />
+      <Item value="Email" priority="3" />
+      <Item value="PasswordSalt" priority="1" />
+      <Item value="Guid" priority="5" />
+      <Item value="PasswordHash" priority="1" />
+      <Item value="CreatedAt" priority="0" />
+      <Item value="DateTime" priority="2" />
+      <Item value="CreatedBy" priority="0" />
+      <Item value="andy" priority="1" />
+      <Item value="Title" priority="1" />
+      <Item value="Description" priority="0" />
+      <Item value="VimeoId" priority="0" />
+      <Item value="Level" priority="0" />
+      <Item value="DifficultyLevel" priority="0" />
+      <Item value="Tags" priority="2" />
+      <Item value="List&lt;Tag&gt;" priority="2" />
+      <Item value="Tag" priority="6" />
+      <Item value="Name" priority="5" />
+      <Item value="ep1" priority="2" />
+      <Item value="Cascade" priority="2" />
+      <Item value="CascadeEnum" priority="1" />
+      <Item value="episode" priority="11" />
+      <Item value="TwitterName" priority="0" />
+      <Item value="private" priority="0" />
+      <Item value="Pandora" priority="0" />
+      <Item value="IOrderedQueryable" priority="0" />
+      <Item value="PaginatedFind" priority="0" />
+      <Item value="page" priority="0" />
+      <Item value="pageSize" priority="0" />
+      <Item value="T" priority="0" />
+      <Item value="Links" priority="0" />
+      <Item value="List&lt;Link&gt;" priority="0" />
+      <Item value="Link" priority="2" />
+      <Item value="Text" priority="3" />
+      <Item value="Url" priority="2" />
+      <Item value="GravatarHelper" priority="0" />
+      <Item value="Comments" priority="0" />
+      <Item value="List&lt;Comment&gt;" priority="0" />
+      <Item value="Comment" priority="3" />
+      <Item value="OrderBy" priority="1" />
+      <Item value="ActiveRecordStarter" priority="3" />
+      <Item value="foreach" priority="1" />
+      <Item value="in" priority="0" />
+      <Item value="migrations" priority="0" />
+      <Item value="migrationsFolder" priority="1" />
+      <Item value="Migration" priority="3" />
+      <Item value="Order" priority="2" />
+      <Item value="if" priority="12" />
+      <Item value="m" priority="0" />
+      <Item value="fileName" priority="1" />
+      <Item value="migration" priority="1" />
+      <Item value="FileName" priority="0" />
+      <Item value="ExecutedAt" priority="0" />
+      <Item value="try" priority="1" />
+      <Item value="Verb" priority="0" />
+      <Item value="ARDataBind" priority="0" />
+      <Item value="AutoLoad" priority="0" />
+      <Item value="AutoLoadBehavior" priority="2" />
+      <Item value="comment" priority="5" />
+      <Item value="RedirectUsingNamedRoute" priority="0" />
+      <Item value="routeParams" priority="0" />
+      <Item value="Redirect" priority="1" />
+      <Item value="abstract" priority="0" />
+      <Item value="userName" priority="1" />
+      <Item value="user" priority="10" />
+      <Item value="Session" priority="0" />
+      <Item value="NotNull" priority="1" />
+      <Item value="null" priority="1" />
+      <Item value="RedirectToAction" priority="2" />
+      <Item value="Flash" priority="0" />
+      <Item value="System" priority="0" />
+      <Item value="Security" priority="0" />
+      <Item value="SecurityException" priority="0" />
+      <Item value="FindAllByProperty" priority="0" />
+      <Item value="Unique" priority="1" />
+      <Item value="u" priority="0" />
+      <Item value="throw" priority="1" />
+      <Item value="SecurityAccessDeniedException" priority="0" />
+      <Item value="password" priority="0" />
+      <Item value="passwordHash" priority="0" />
+      <Item value="true" priority="2" />
+      <Item value="c" priority="0" />
+      <Item value="ControllerBase" priority="0" />
+      <Item value="IFilter" priority="0" />
+      <Item value="ExecuteWhen" priority="0" />
+      <Item value="SessionlessMonoRailHttpHandler" priority="0" />
+      <Item value="controller" priority="2" />
+      <Item value="context" priority="2" />
+      <Item value="as" priority="1" />
+      <Item value="token" priority="0" />
+      <Item value="false" priority="0" />
+      <Item value="controllerContext" priority="1" />
+      <Item value="users" priority="0" />
+      <Item value="controllerBase" priority="1" />
+      <Item value="InvalidOperationException" priority="0" />
+      <Item value="CurrentUser" priority="5" />
+      <Item value="bool" priority="0" />
+      <Item value="else" priority="0" />
+      <Item value="Filter" priority="0" />
+      <Item value="tags" priority="2" />
+      <Item value="input" priority="0" />
+      <Item value="this" priority="0" />
+      <Item value="t" priority="2" />
+      <Item value="tagName" priority="0" />
+      <Item value="tag" priority="1" />
+      <Item value="name" priority="0" />
+      <Item value="object" priority="0" />
+      <Item value="Comment`0" priority="1" />
+      <Item value="ARFetch" priority="0" />
+      <Item value="Episode`0" priority="0" />
+      <Item value="Submission`0" priority="1" />
+      <Item value="SubmissionsController`0" priority="0" />
+      <Item value="RedirectToAction`0" priority="0" />
+      <Item value="submission" priority="1" />
+      <Item value="Submitted" priority="0" />
+      <Item value="Accepted" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Castle.MonoRail.Framework.Routing.PatternRoute">
+      <Item value="Restrict" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Castle.MonoRail.Framework.Routing.PatternRoute+RestrictionConfigurer">
+      <Item value="ValidInteger" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IOrderedQueryable`1">
+      <Item value="OrderBy" priority="0" />
+      <Item value="ToList" priority="0" />
+      <Item value="OrderByDescending" priority="0" />
+      <Item value="Where" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AndyPike.Castlecasts.Website.Models.Episode">
+      <Item value="CreatedAt" priority="1" />
+      <Item value="Save" priority="1" />
+      <Item value="Id" priority="0" />
+      <Item value="SeoTitle" priority="0" />
+      <Item value="Comments" priority="1" />
+      <Item value="CreatedBy" priority="0" />
+      <Item value="Title" priority="0" />
+      <Item value="Published" priority="2" />
+      <Item value="Tags" priority="1" />
+      <Item value="RssPubDate" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Reflection.Assembly">
+      <Item value="GetExecutingAssembly" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Guid">
+      <Item value="NewGuid" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Guid">
+      <Item value="ToString" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="UtcNow" priority="1" />
+      <Item value="Now" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@AndyPike.Castlecasts.Website.Models.DifficultyLevel">
+      <Item value="Beginner" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AndyPike.Castlecasts.Website.Models.User">
+      <Item value="Save" priority="2" />
+      <Item value="Id" priority="0" />
+      <Item value="PasswordSalt" priority="0" />
+      <Item value="PasswordHash" priority="0" />
+      <Item value="Token" priority="2" />
+      <Item value="FullName" priority="0" />
+      <Item value="Email" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Castle.ActiveRecord.CascadeEnum">
+      <Item value="SaveUpdate" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@AndyPike.Castlecasts.Website.Models.Episode">
+      <Item value="GetLatestEpisodesPaged" priority="0" />
+      <Item value="FindAll" priority="0" />
+      <Item value="Find" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Replace" priority="0" />
+      <Item value="ToLower" priority="0" />
+      <Item value="Split" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="AddDays" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Castle.ActiveRecord.ActiveRecordStarter">
+      <Item value="GenerateCreationScripts" priority="2" />
+      <Item value="CreateSchemaFromFile" priority="0" />
+      <Item value="CreateSchema" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpServerUtility">
+      <Item value="MapPath" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.Directory">
+      <Item value="GetFiles" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.IO.Path">
+      <Item value="Combine" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@AndyPike.Castlecasts.Website.Models.Migration">
+      <Item value="FindAll" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="Count" priority="0" />
+      <Item value="ToArray" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AndyPike.Castlecasts.Website.Models.Migration">
+      <Item value="Save" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Castle.MonoRail.Framework.Verb">
+      <Item value="Post" priority="0" />
+      <Item value="Put" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Castle.MonoRail.ActiveRecordSupport.AutoLoadBehavior">
+      <Item value="OnlyNested" priority="1" />
+      <Item value="NewInstanceIfInvalidKey" priority="0" />
+      <Item value="Always" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AndyPike.Castlecasts.Website.Models.Comment">
+      <Item value="Save" priority="0" />
+      <Item value="Episode" priority="2" />
+      <Item value="CreatedAt" priority="0" />
+      <Item value="Delete`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.Dictionary`2">
+      <Item value="Add" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="IsInterned" priority="0" />
+      <Item value="Format" priority="0" />
+      <Item value="Join" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="FirstOrDefault" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Nullable`1">
+      <Item value="Value" priority="0" />
+      <Item value="HasValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Castle.MonoRail.Framework.ExecuteWhen">
+      <Item value="BeforeAction" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Castle.MonoRail.Framework.IEngineContext">
+      <Item value="Session" priority="0" />
+      <Item value="Flash" priority="0" />
+      <Item value="Response" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Castle.MonoRail.Framework.IResponse">
+      <Item value="Redirect" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@AndyPike.Castlecasts.Website.Models.User">
+      <Item value="FindAll" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AndyPike.Castlecasts.Website.Controllers.ControllerBase">
+      <Item value="CurrentUser" priority="0" />
+      <Item value="PropertyBag" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IList`1">
+      <Item value="Add" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@AndyPike.Castlecasts.Website.Models.Tag">
+      <Item value="Queryable" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AndyPike.Castlecasts.Website.Models.Tag">
+      <Item value="Name" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@AndyPike.Castlecasts.Website.Models.Comment">
+      <Item value="FindAll`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AndyPike.Castlecasts.Website.Models.Submission">
+      <Item value="Save`0" priority="0" />
+      <Item value="Status" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@AndyPike.Castlecasts.Website.Models.SubmissionStatus">
+      <Item value="Rejected" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>
