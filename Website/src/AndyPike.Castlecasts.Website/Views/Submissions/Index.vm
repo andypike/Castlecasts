@@ -6,9 +6,8 @@
 <p>Not sure what topic to cover? Pick one from the <a href="http://castlecasts.uservoice.com">suggestions forum</a> ;o)</p>
 
 <h2>How to create a Castlecast</h2>
-
-<p>I use a Mac with OSX Snow Leopard, so here are my settings. There are of course alternative software for each Operating System where settings may vary. If you have other recommendations, feel free to send them over.</p>
-<p>The settings below are for guidance only, feel free to use different settings for your software. </p>
+<p>I use a Mac with OSX Snow Leopard, so here are my settings. There are of course alternative software for each Operating System where settings may vary.</p>
+<p>The settings below are the official standards that all Castlecasts should use.</p>
 
 <h4>When capturing with <a href="http://www.shinywhitebox.com/home/home.html">iShowU</a>:</h4>
 <ul>
@@ -47,17 +46,19 @@
     <li>Select a topic that hasn't been covered but builds on previous casts.</li>
     <li>Plan the points you would like to cover in advance.</li>
     <li>Set the capture area to the main editor area of Visual Studio, cropping out stuff that isn't interesting.</li>
+    <li>Increase your font size (or zoom in VS2010) to ensure code is readable.</li>
+    <li>Set your other VS panels to auto-hide to maximise the text editor area.</li>
     <li>Feel free to use slides if it helps but keep this to a minimum. We want to see the code!</li>
     <li>Keep casts around 15-20 minutes in length and focus on a specific topic.</li>
     <li>Balance the amount of pre-created code and coding during the cast. People don't want to spend the whole time watching you type everything.</li>
-    <li>Upload your cast to <a href="http://vimeo.com/">Vimeo</a> as this provides better quality then YouTube.</li>
+    <li>Upload your cast to <a href="http://vimeo.com/">Vimeo</a> as this provides better quality than YouTube.</li>
     <li>Make the source code available for download somewhere, I use <a href="http://www.github.com">GitHub</a>.</li>
     <li>Keep the camera on your screen, we don't really want to see your face or you standing in front of a user group. It's hard to see the code. ;o)</li>
 </ul>
 
 
 <h2>Submit your Castlecast</h2>
-<p>Once you have completed your Castlecast and uploaded it to a video hosting service, please complete the form below. We'll review it first to ensure that the quality of the content is kept as high as possible. Don't worry, I'm sure the vast majority of casts will be approved.</p>
+<p>Once you have completed your Castlecast and uploaded it to <a href="http://vimeo.com/">Vimeo</a>, please complete the form below. We'll review it first to ensure that the quality of the content is kept as high as possible.</p>
 
 <form action="$url.for("%{controller='Submissions', action='Create'}")" method="post">
     <fieldset>
