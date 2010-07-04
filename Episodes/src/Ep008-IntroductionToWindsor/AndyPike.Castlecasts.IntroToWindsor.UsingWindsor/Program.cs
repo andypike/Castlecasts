@@ -17,7 +17,7 @@ namespace AndyPike.Castlecasts.IntroToWindsor.UsingWindsor
 
             var orderProcessingService = container.Resolve<IOrderProcessingService>();
             orderProcessingService.PlaceOrder(new Order());
-
+            
             Console.ReadLine();
         }
     }
