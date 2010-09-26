@@ -6,7 +6,7 @@
     <div class="episode">
         <div class="box">
             <div class="number">#${episode.Id}</div>
-            <div class="date">$episode.CreatedAt.ToString("dd MMM yy")</div>
+            <!--<div class="date">$episode.CreatedAt.ToString("dd MMM yy")</div>-->
         </div>
         <h2>$Url.Link($x.h($episode.Title), "%{controller='Episodes', action='Show', params={episode=$episode.Id, title=$episode.SeoTitle}}")</h2>
         <p>$x.h($episode.Description)</p>

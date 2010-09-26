@@ -28,8 +28,8 @@
       <File id="63B828EA-EFB8-4AF5-B0FC-64B5A7E76CBC/f:IOrderProcessingService.cs" caret="129" fromTop="3" />
       <File id="63B828EA-EFB8-4AF5-B0FC-64B5A7E76CBC/f:OrderProcessingService.cs" caret="538" fromTop="13" />
       <File id="63B828EA-EFB8-4AF5-B0FC-64B5A7E76CBC/f:SmsSender.cs" caret="277" fromTop="10" />
-      <File id="63B828EA-EFB8-4AF5-B0FC-64B5A7E76CBC/f:Program.cs" caret="535" fromTop="14" />
       <File id="63B828EA-EFB8-4AF5-B0FC-64B5A7E76CBC/f:Windsor.config" caret="78" fromTop="2" />
+      <File id="63B828EA-EFB8-4AF5-B0FC-64B5A7E76CBC/f:Program.cs" caret="700" fromTop="18" />
     </RecentFiles>
     <RecentEdits>
       <File id="AAA0EFEF-340B-4BDB-9C4A-3C7236EBBF64/f:Customer.cs" caret="49" fromTop="0" />
@@ -57,11 +57,11 @@
       <File id="63B828EA-EFB8-4AF5-B0FC-64B5A7E76CBC/f:NHibernateRepository.cs" caret="391" fromTop="14" />
       <File id="63B828EA-EFB8-4AF5-B0FC-64B5A7E76CBC/f:FileLogger.cs" caret="273" fromTop="8" />
       <File id="63B828EA-EFB8-4AF5-B0FC-64B5A7E76CBC/f:PlainTextEmailer.cs" caret="308" fromTop="7" />
-      <File id="63B828EA-EFB8-4AF5-B0FC-64B5A7E76CBC/f:Program.cs" caret="721" fromTop="19" />
       <File id="63B828EA-EFB8-4AF5-B0FC-64B5A7E76CBC/f:OrderProcessingService.cs" caret="595" fromTop="13" />
       <File id="63B828EA-EFB8-4AF5-B0FC-64B5A7E76CBC/f:SmsSender.cs" caret="118" fromTop="3" />
       <File id="63B828EA-EFB8-4AF5-B0FC-64B5A7E76CBC/f:SmsSender.cs" caret="256" fromTop="7" />
       <File id="63B828EA-EFB8-4AF5-B0FC-64B5A7E76CBC/f:Program.cs" caret="449" fromTop="13" />
+      <File id="63B828EA-EFB8-4AF5-B0FC-64B5A7E76CBC/f:Program.cs" caret="700" fromTop="18" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
